@@ -14,12 +14,6 @@ body{
   background-image: linear-gradient(180deg, #09117E, #09ABF3);
 }
 
-.App-header{
-  display: flex;
-  background-color: #fff;
-  justify-content: center;
-}
-
 li{
   list-style: none;
 }

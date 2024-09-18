@@ -23,12 +23,27 @@ font-size: 16px;
         font-weight: 500;
         margin-bottom: 40px;
 `
+const Resultado = styled.div`
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 20px;
+   cursor: pointer;
+   p {
+       width: 200px;
+   }
+   img {
+       width: 100px;
+   }
+   &:hover {
+       border: 1px solid white;
+   }
+`
 
 const Pesquisa = () => {
 
   const [livrosPesquisados, setLivrosPesquisados] = useState([]); // padrão é uma lista vazia
 
-  console.log(livrosPesquisados);
 
   return (
     <PesquisaContainer>
@@ -39,10 +54,18 @@ const Pesquisa = () => {
                 onBlur={evento => {
                     const textoDigitado = evento.target.value
                     const resultadoPesquisa = livros.filter( livro =>
-                         livro.nome.toLowerCase().includes(textoDigitado.toLowerCase()) )
+                         livro.nome.toLowerCase().includes(textoDigitado.trim().toLowerCase()) )
                     setLivrosPesquisados(resultadoPesquisa)
                 }}
             />
+            {
+                livrosPesquisados.map(item => (
+                    <Resultado key={item.id}>
+                        <p>{item.nome}</p>
+                        <img src={item.src}/>
+                    </Resultado>
+                ))
+            }
     </PesquisaContainer>
   )
 }

@@ -1,5 +1,7 @@
-import './App.css'
-import Logo from './components/Logo'
+import './App.css';
+import IconesHeader from './components/IconesHeader';
+import Logo from './components/Logo';
+import OpcoesHeader from './components/OpcoesHeader';
 
 function App() {
 
@@ -7,6 +9,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Logo></Logo>
+        <OpcoesHeader></OpcoesHeader>
+        <IconesHeader></IconesHeader>
       </header>
     </div>
   )

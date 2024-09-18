@@ -4,9 +4,9 @@ export const Titulo = styled.h2`
     width: 100%;
     padding: 30px 0;
     background-color: #FFF;
-    color: ${props => props.cor || '#FDD6A2' };
-    font-size: 36px;
-    text-align: center;
+    color: ${props => props.cor || '#000' };
+    font-size: ${props => props.tamanhoFonte || '18px' };
+    text-align: ${props => props.alinhamento || 'right' };
     margin: 0;
     text-transform: uppercase;
 `

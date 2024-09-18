@@ -20,13 +20,23 @@ const NovosLivrosContainer = styled.div`
 function UltimosLancamentos(){
     return (
         <UltimosLancamentosContainer>
-            <Titulo>Últimos Lançamentos 1</Titulo>
-            <Titulo cor="#000">Últimos Lançamentos 2</Titulo> {/* passando prop*/}
+            <Titulo
+                cor="#EB9B00"
+                tamanhoFonte="36px"
+                alinhamento="center"
+            >Últimos Lançamentos</Titulo> {/* utilizando props */}
             <NovosLivrosContainer>
                 { livros.map(item => (
                     <img key={item.id} src={item.src}/>
                 ))}
             </NovosLivrosContainer>
+
+            <div>
+                <h3>Talvez você se interesse por ...</h3>
+                <h4>Angular 17</h4>
+                <p>Construindo uma aplicação integrada com o Google</p>
+                <button>Saiba mais</button>
+            </div>
         </UltimosLancamentosContainer>
     )
 }
